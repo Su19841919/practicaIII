@@ -13,6 +13,7 @@
     <h1>Administrador: 
         <?php 
            echo $_SESSION['nombre'];
+           echo " ";
            echo $_SESSION['apellido'];
         ?>
     </h1>
@@ -21,7 +22,7 @@
             <li><a href="registrarLocalidad.php">Resgistrar localidad</a></li>
             <li><a href="RegistrarEdificio.php">Resgistrar edificio</a></li>
             <li><a href="agregarUsuario.html">Agregar administrador</a></li>
-            <li><a href="cerrarSesion.php">Cerrar sesión</a></li>
+            <li><a href="../basesDeDatos/cerrarSesion.php">Cerrar sesión</a></li>
        </ul>
     </nav>
     

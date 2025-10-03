@@ -9,13 +9,21 @@
   $_SESSION['nombre'] = $Usuario; 
   $_SESSION['apellido'] = $apellido;  
   
- $query = "SELECT * FROM usuarios WHERE Usuario = '$Usuario' AND Apellido = '$apellido' AND contrasenia = '$contrasenia' AND rol = 'administrador'  ";
-    
-    if(mysqli_query($conexion, $query)){
-      header("Location: ../administrador/admin.php ");
-    }else{
-        header("Location: ../usuario/cuentaUsuario.php");
-    }
+  $buscarUsuario = "SELECT * FROM usuarios WHERE contrasenia = '$contrasenia'";
 
+  $resultado = mysqli_query($conexion, $buscarUsuario);
+
+  $filas = mysqli_fetch_assoc($resultado);
+
+  if($filas['rol'] == 'administrador'){
+    header("Location: ../administrador/admin.php");
+  }else{
+    header("Location: ../usuario/cuentaUsuario.php");
+  }
+
+
+
+     
+  
 
 ?>
