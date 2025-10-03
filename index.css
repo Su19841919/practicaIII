@@ -1,0 +1,24 @@
+
+ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+li{
+    padding-right: 7%;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    font-size: 28px;
+    color: black;
+}
+
+
+footer{
+    border: 2px solid;
+    width: 100%;
+    height: 400px;
+    margin-top: 650px;
+}
